@@ -221,7 +221,7 @@ urlpatterns = [
   - `comments/`: URL for listing all comments or creating a new comment.
   - `comments/<int:pk>/`: URL for retrieving, updating, or deleting a specific comment by its primary key (ID).
 
-## Followers App 
+## 👥Followers App 
 
 The `followers` app in this project manages relationships where a user can follow or unfollow another user. It includes models, serializers, views, and URL configurations to support creating, viewing, and deleting follower relationships.
 
@@ -391,7 +391,7 @@ urlpatterns = [
   - `followers/`: URL for listing all follower relationships or creating a new one.
   - `followers/<int:pk>/`: URL for retrieving or deleting a specific follower relationship by its primary key (ID).
 
-## Likes App
+## 👍Likes App
 
 The `likes` app provides functionality for users to like posts. It includes models, serializers, views, and URL configurations to support creating, viewing, and deleting likes on posts.
 
@@ -559,7 +559,7 @@ urlpatterns = [
   - `likes/`: URL for listing all likes or creating a new one.
   - `likes/<int:pk>/`: URL for retrieving or deleting a specific like by its primary key (ID).
 
-## Posts App
+## 📝Posts App
 
 The `posts` app is a core component of this project, enabling users to create, view, update, and delete posts. Each post may include content, an image, and other related metadata, allowing users to share their experiences and interact with the platform.
 
@@ -733,7 +733,7 @@ urlpatterns = [
 - **`posts/`**: Lists all posts or allows authenticated users to create a post.
 - **`posts/<int:pk>/`**: Retrieves, updates, or deletes a specific post by ID.
 
-# Products App
+# 🧴Products App
 
 The `products` app manages product recommendations for addressing skin issues. Users can create, view, update, and delete products, which are categorized for easy filtering and discovery.
 
@@ -984,7 +984,7 @@ In the **Products App**, there are two main models: `Product` and `Category`. Wh
 
 ---
 
-## Profiles App
+## 👤Profiles App
 
 The `profiles` app manages user profiles, including viewing and updating profile details. Profiles are automatically created when a user account is created, leveraging Django signals.
 
@@ -1191,7 +1191,7 @@ admin.site.register(Profile)
 
 ```
 
-## Core API (drf_api)
+## 🌐Core API (drf_api)
 
 The `drf_api` core app serves as the central configuration and control hub for the entire project, managing high-level functionalities such as authentication, permissions, and routing. As the backbone of the project, it ensures secure and efficient interactions across the platform.
 
@@ -1213,7 +1213,7 @@ This app includes essential files and custom configurations to support:
 
 Adjusting settings allows fine-tuning of elements like JWT authentication, cookie handling, and CORS policies to meet the project’s needs, enhancing security and performance across deployment stages.
 
-## Project Dependencies
+## 📦Project Dependencies
 
 The `requirements.txt` file specifies the packages required for this Django REST framework project, ensuring a robust, secure, and fully-featured backend.
 
