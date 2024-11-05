@@ -1163,7 +1163,7 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
   - **queryset**: Annotates profiles with post, follower, and following counts.
   - **serializer_class**: Specifies the serializer for `Profile`.
  
-## URLs
+### URLs
 Defines URL patterns for accessing profile-related views.
 
 ```python
@@ -1180,7 +1180,7 @@ urlpatterns = [
 - **`profiles/`**: Lists all profiles.
 - **`profiles/<int:pk>/`**: Retrieves or updates a specific profile by ID.
 
-## Admin Registration
+### Admin Registration
 In `admin.py`, the `Profile` model is registered for easy management in the Django admin interface.
 
 ```python
