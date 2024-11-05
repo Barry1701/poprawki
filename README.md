@@ -14,7 +14,7 @@ This project is a Django REST framework (DRF) API designed to provide backend fu
 - [Project Dependencies](#project-dependencies)
 
 
-### Additional Files
+## Additional Files
 
 - **.gitignore** - Specifies files and directories that Git should ignore (e.g., environment files, compiled code).
     
@@ -66,7 +66,7 @@ class Comment(models.Model):
 - **String Representation**:
   - Returns the content of the comment as its string representation.
  
-## Serializers
+### Serializers
 
 The serializers convert `Comment` model instances into JSON and add additional fields for the API response.
 
@@ -141,7 +141,7 @@ class CommentDetailSerializer(CommentSerializer):
 
   - `post`: Read-only field displaying the ID of the associated post. This allows for viewing the post ID without the need to set it on each update.
 
-## Views
+### Views
 
 The views provide the logic for listing, creating, retrieving, updating, and deleting comments.
 
@@ -203,7 +203,7 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
   - `serializer_class`: Specifies the `CommentDetailSerializer` for detailed representation.
   - `queryset`: Defines the base queryset to retrieve comments.
 
-## URLs
+### URLs
 
 Defines the URL patterns for accessing comment-related views.
 
@@ -271,7 +271,7 @@ class Follower(models.Model):
 
   - Returns a string with the `owner` and `followed` usernames.
  
-## Serializers
+### Serializers
 
 The `FollowerSerializer` converts `Follower` model instances into JSON and handles the unique constraint on `owner` and `followed` fields.
 
@@ -316,7 +316,7 @@ class FollowerSerializer(serializers.ModelSerializer):
 
   - `create`: Attempts to create a follower relationship and raises a validation error if the relationship already exists (duplicate).
  
-## Views
+### Views
 
 The views provide the logic for listing, creating, retrieving, and deleting follower relationships.
 
@@ -373,7 +373,7 @@ class FollowerDetail(generics.RetrieveDestroyAPIView):
   - `queryset`: Defines the base queryset to retrieve follower relationships.
   - `serializer_class`: Specifies the serializer to use for detailed representation of the `Follower` model.
  
-## URLs
+### URLs
 
 Defines the URL patterns for accessing follower-related views.
 
@@ -440,7 +440,7 @@ class Like(models.Model):
 
   - Returns a string with the `owner` and `post` identifiers.
  
-## Serializers
+### Serializers
 
 The `LikeSerializer` converts `Like` model instances into JSON and handles the unique constraint on `owner` and `post` fields.
 
@@ -484,7 +484,7 @@ class LikeSerializer(serializers.ModelSerializer):
 
   - `create`: Attempts to create a like and raises a validation error if the like already exists (duplicate).
  
-## Views
+### Views
 
 The views provide the logic for listing, creating, retrieving, and deleting likes.
 
@@ -541,7 +541,7 @@ class LikeDetail(generics.RetrieveDestroyAPIView):
   - `queryset`: Defines the base queryset to retrieve likes.
   - `serializer_class`: Specifies the serializer to use for detailed representation of the `Like` model.
  
-## URLs
+### URLs
 
 Defines the URL patterns for accessing like-related views.
 
@@ -603,7 +603,7 @@ class Post(models.Model):
 - **String Representation**:
   - Returns the post ID and title as its string representation for easy identification.
  
-## Serializers
+### Serializers
 The `PostSerializer` converts `Post` model instances into JSON format. It also adds supplementary fields that include metadata about the owner, profile details, and counts for likes and comments.
 
 ```python
@@ -715,7 +715,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
   - **permission_classes**: Restricts update and delete actions to the post owner.
   - **queryset**: Includes counts for likes and comments to provide detailed view data.
  
-## URLs
+### URLs
 
 Defines URL patterns for accessing post-related views.
 
@@ -737,7 +737,7 @@ urlpatterns = [
 
 The `products` app manages product recommendations for addressing skin issues. Users can create, view, update, and delete products, which are categorized for easy filtering and discovery.
 
-## Models
+### Models
 
 The `Category` and `Product` models define the structure of product categories and product listings.
 
@@ -809,7 +809,7 @@ class Product(models.Model):
 - **String Representation**:
   - Returns the product name.
  
-## Serializers
+### Serializers
 The `CategorySerializer` and `ProductSerializer` convert model instances into JSON format for API responses and handle validation.
 
 ### `CategorySerializer`
@@ -955,7 +955,7 @@ class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
   - **queryset**: Base queryset for categories.
   - **serializer_class**: Specifies the serializer for `Category`.
  
-## URLs
+### URLs
 Defines URL patterns for accessing product and category views.
 
 ```python
@@ -1039,7 +1039,7 @@ post_save.connect(create_profile, sender=User)
 
   - Returns a string with the profile owner’s name.
  
-## Serializers
+### Serializers
 The `ProfileSerializer` converts `Profile` model instances into JSON format and includes extra fields for post, follower, and following counts.
 
 ```python
