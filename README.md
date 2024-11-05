@@ -2,6 +2,12 @@
 
 This project is a Django REST framework (DRF) API designed to provide backend functionality for a social media platform that supports user interactions through comments, likes, follows, and posts. The API also includes features for managing user profiles and products, offering endpoints for various actions, including authentication, CRUD operations for posts, and social interactions between users.
 
+## Root Page
+
+The following image shows the root page of the API, providing a welcome message. Users can access the root route to verify the API is running and view a basic JSON response.
+
+![Root Route Page](documentation/root.png)
+
 ## Project Structure
 
 - [Comments App](#comments-app)
